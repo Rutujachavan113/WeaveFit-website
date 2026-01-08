@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services | SmartTailor Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/service.css">
+</head>
+<body>
+
+<section class="service-flow">
+
+  <!-- PAGE TITLE -->
+  <h1 class="page-title">Tailoring Service Booking</h1>
+  <p class="page-subtitle">Choose your style, fabric & measurements in simple steps</p>
+
+  <!-- ================= STEP 0 : CATEGORY ================= -->
+  <div class="step active" id="step-category">
+    <h2>Select Category</h2>
+
+    <div class="card-grid">
+
+      <!-- WOMEN -->
+      <div class="card" onclick="showWomen()">
+        <img src="https://shreeman.in/cdn/shop/files/Tulip06Mar230416copy.jpg" alt="Women Tailoring">
+        <div class="card-overlay">
+          <h2>Custom Women Wear</h2>
+          <p>Beautifully stitched outfits for every occasion.</p>
+          <button type="button">Women</button>
+        </div>
+      </div>
+
+      <!-- MEN -->
+      <div class="card" onclick="showMen()">
+        <img src="https://images.jdmagicbox.com/quickquotes/images_main/formal-dress-suit-kmhgavnv.jpg" alt="Men Tailoring">
+        <div class="card-overlay">
+          <h2>Custom Men Wear</h2>
+          <p>Designed for today’s style with classic precision.</p>
+          <button type="button">Men</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= STEP 1 : SERVICE TYPE ================= -->
+  <!-- ⚠️ DO NOT ADD CARDS MANUALLY HERE -->
+  <!-- Cards are injected by services.js -->
+  <div class="step" id="step-type">
+    <h2 id="typeTitle"></h2>
+    <div class="card-grid" id="typeOptions"></div>
+  </div>
+
+  <!-- ================= STEP 2 : FABRIC OPTION ================= -->
+  <div class="step" id="step-fabric">
+    <h2>Choose Fabric Option</h2>
+
+    <div class="card-grid">
+
+      <div class="card" onclick="chooseFabric('ours')">
+        <img src="https://cdn.shopify.com/s/files/1/2284/3931/files/32pZxnQE4rcxgWv9KSstG67fb100r2kd1577483042.jpg?v=1577734615" alt="Our Fabric">
+        <div class="card-overlay">
+          <h2>Our Fabric</h2>
+          <p>Premium quality fabrics for perfect finishing.</p>
+          <button type="button">Select</button>
+        </div>
+      </div>
+
+      <div class="card" onclick="chooseFabric('own')">
+        <img src="https://printify.com/wp-content/uploads/2025/01/Cotton-polyester-blends-Printify-1536x1024.png" alt="Your Fabric">
+        <div class="card-overlay">
+          <h2>Your Fabric</h2>
+          <p>Use your own fabric for custom stitching.</p>
+          <button type="button">Continue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= STEP 3 : MEASUREMENTS ================= -->
+  <div class="step" id="step-measure">
+    <h2>Enter Measurements</h2>
+    <form id="measurementForm"></form>
+  </div>
+
+  <!-- ================= STEP 4 : CONFIRMATION ================= -->
+  <div class="step" id="step-book">
+    <div class="confirm-card">
+      <div class="checkmark">✓</div>
+      <h2>Appointment Confirmed</h2>
+      <p>
+        Thank you for choosing <strong>SmartTailor Pro</strong>.<br>
+        Our tailoring expert will contact you shortly.
+      </p>
+      <button class="done-btn" type="button" onclick="resetFlow()">Back to Services</button>
+    </div>
+  </div>
+
+</section>
+
+<script src="../JS/services.js"></script>
+</body>
+</html>

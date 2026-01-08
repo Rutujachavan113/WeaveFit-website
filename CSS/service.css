@@ -1,0 +1,288 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #111827;
+  color: white;
+}
+
+/* ================= CONTAINER ================= */
+.service-flow {
+  min-height: 100vh;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* ================= TITLES ================= */
+.page-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  color: #cbd5e1;
+  margin-bottom: 60px;
+}
+
+/* ================= STEPS ================= */
+.step {
+  display: none;
+  animation: fadeUp 0.6s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+.step h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+/* ================= CARD GRID ================= */
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ================= CARD ================= */
+.card {
+  position: relative;
+  width: 360px;
+  height: 460px;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= OVERLAY ================= */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0.25)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* ================= TEXT ================= */
+.card-overlay h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card-overlay p {
+  font-size: 15px;
+  color: #e5e7eb;
+  margin-bottom: 22px;
+  max-width: 280px;
+}
+
+/* ================= BUTTON ================= */
+.card-overlay button {
+  padding: 12px 34px;
+  border-radius: 30px;
+  border: none;
+  background: #f9c74f;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-overlay button:hover {
+  background: #ffd166;
+  transform: translateY(-4px);
+}
+
+/* ================= HOVER ================= */
+.card:hover {
+  transform: translateY(-14px) scale(1.04);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.65);
+}
+
+/* ================= FORM ================= */
+#measurementForm input {
+  width: 300px;
+  padding: 12px;
+  margin: 12px auto;
+  display: block;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+#measurementForm button {
+  margin-top: 20px;
+  padding: 14px 36px;
+  border-radius: 30px;
+  background: #f9c74f;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= CONFIRMATION ================= */
+.confirm-card {
+  max-width: 420px;
+  margin: auto;
+  padding: 40px;
+  background: #111827;
+  border-radius: 20px;
+  animation: popIn 0.6s ease;
+}
+
+.checkmark {
+  width: 70px;
+  height: 70px;
+  margin: auto auto 20px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+}
+
+.done-btn {
+  margin-top: 20px;
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: none;
+  background: #f9c74f;
+  cursor: pointer;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================================================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ================================================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .service-flow {
+    padding: 90px 15px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .step h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 90%;
+    height: 420px;
+  }
+
+  .card-overlay h2 {
+    font-size: 26px;
+  }
+
+  .card-overlay p {
+    font-size: 14px;
+  }
+
+  #measurementForm input {
+    width: 90%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+  .service-flow {
+    padding: 80px 12px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .page-subtitle {
+    font-size: 13px;
+  }
+
+  .step h2 {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 100%;
+    height: 380px;
+  }
+
+  .card-overlay h2 {
+    font-size: 22px;
+  }
+
+  .card-overlay p {
+    font-size: 13px;
+  }
+
+  .card-overlay button {
+    padding: 10px 26px;
+    font-size: 14px;
+  }
+
+  .confirm-card {
+    padding: 30px 20px;
+  }
+}

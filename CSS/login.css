@@ -1,0 +1,193 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("https://t3.ftcdn.net/jpg/02/97/01/96/360_F_297019634_vErqaI5PqCGfvThJlZZirfTaprPKDPqy.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ================= CONTAINER ================= */
+.auth-container {
+  width: 900px;
+  height: 540px;
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* ================= LEFT ================= */
+.auth-left {
+  width: 45%;
+  background: #111;
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-left span {
+  color: #f9c74f;
+}
+
+/* ================= RIGHT ================= */
+.auth-right {
+  width: 55%;
+  padding: 60px;
+}
+
+/* ================= FORM ================= */
+.form {
+  display: none;
+  animation: slide 0.5s ease;
+}
+
+.form.active {
+  display: block;
+}
+
+.form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 14px;
+  background: #f9c74f;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form button:hover {
+  background: #ffd166;
+}
+
+/* ================= LINKS ================= */
+.link {
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.link span {
+  color: #f9c74f;
+  font-weight: bold;
+}
+
+/* ================= ERROR ================= */
+.error {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* ================= PASSWORD STRENGTH ================= */
+.strength {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.strength span {
+  font-weight: bold;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================================================= */
+/* 📱 RESPONSIVE DESIGN */
+/* ================================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .auth-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .auth-left,
+  .auth-right {
+    padding: 40px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .auth-left {
+    width: 100%;
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  .auth-right {
+    width: 100%;
+    padding: 35px 25px;
+  }
+
+  .auth-left h1,
+  .auth-left h2,
+  .auth-left p {
+    text-align: center;
+  }
+
+  .form input {
+    padding: 12px;
+  }
+
+  .form button {
+    padding: 12px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+
+  .auth-left,
+  .auth-right {
+    padding: 30px 18px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SmartTailor Pro</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+
+<div class="auth-container">
+
+  <!-- LEFT BRAND -->
+  <div class="auth-left">
+    <h1>SmartTailor<span>Pro</span></h1>
+    <p>Perfect Fit. Smart Style.</p>
+  </div>
+
+  <!-- RIGHT FORM -->
+  <div class="auth-right">
+
+    <!-- LOGIN -->
+    <form class="form active" id="loginForm">
+      <h2>Login</h2>
+
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+
+      <p class="error" id="loginError"></p>
+
+      <button type="submit">Login</button>
+
+      <p class="link" onclick="showForgot()">Forgot Password?</p>
+      <p class="link">
+        Don’t have an account?
+        <span onclick="showRegister()">Register</span>
+      </p>
+    </form>
+
+    <!-- REGISTER -->
+    <form class="form" id="registerForm">
+      <h2>Create Account</h2>
+
+      <input type="text" id="regName" placeholder="Full Name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="password" id="regPassword" placeholder="Password">
+
+      <!-- PASSWORD STRENGTH -->
+      <div class="strength">
+        <span id="strengthText"></span>
+      </div>
+
+      <p class="error" id="registerError"></p>
+
+      <button type="submit">Register</button>
+
+      <p class="link">
+        Already have an account?
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </form>
+
+    <!-- FORGOT PASSWORD -->
+    <form class="form" id="forgotForm">
+      <h2>Reset Password</h2>
+
+      <input type="email" id="forgotEmail" placeholder="Enter your email">
+
+      <p class="error" id="forgotError"></p>
+
+      <button type="submit">Send Reset Link</button>
+
+      <p class="link" onclick="showLogin()">Back to Login</p>
+    </form>
+
+  </div>
+</div>
+
+<script src="../JS/login.js"></script>
+</body>
+</html>
