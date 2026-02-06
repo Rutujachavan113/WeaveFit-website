@@ -5,7 +5,7 @@ CustomFit Studio is a modern, responsive web application that allows users to bo
 ---
 
 ## 🚀 Live Demo
-🔗 https://marvelous-axolotl-9f543a.netlify.app/
+🔗 https://weavefit-app.netlify.app/
 
 ---
 
@@ -54,5 +54,48 @@ CustomFit Studio is a modern, responsive web application that allows users to bo
 
 ---
 
-## 🎯 Project Architecture
+
+---
+
+## 💡 Challenges Faced
+
+- Creating a smooth multi-step booking flow
+- Managing dynamic DOM updates for measurement forms
+- Building a full-width animated fabric slider
+- Maintaining consistent UI/UX across multiple pages
+- Making the website fully responsive for mobile devices
+
+---
+
+## 📚 Key Learnings
+
+- Deep understanding of DOM manipulation
+- Responsive design using Flexbox & Grid
+- Advanced CSS animations & transitions
+- Multi-page navigation handling
+- Modular project structuring
+- Deployment using GitHub & Netlify
+
+---
+
+## 📌 Future Improvements
+
+- Add backend (Node.js / Express)
+- Add database (MongoDB / MySQL)
+- Add real payment gateway integration
+- User dashboard for order tracking
+- Admin panel for fabric management
+
+---
+
+## 👨‍💻 Developed By
+
+Rutuja Chavan 
+Frontend Developer  
+Passionate about building clean and user-friendly web applications.
+
+---
+
+⭐ If you like this project, consider giving it a star!
+
 
