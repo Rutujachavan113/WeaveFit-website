@@ -1,19 +1,29 @@
-const animatedItems = document.querySelectorAll(
-  ".slide-left, .slide-right"
-);
+const aboutRows = document.querySelectorAll(".about-row");
 
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
     entries.forEach(entry => {
+      const left = entry.target.querySelector(".slide-left");
+      const right = entry.target.querySelector(".slide-right");
+
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+        // ADD animation
+        if (left) left.classList.add("animate-left");
+        if (right) right.classList.add("animate-right");
+      } else {
+        // REMOVE animation so it can replay
+        if (left) left.classList.remove("animate-left");
+        if (right) right.classList.remove("animate-right");
       }
     });
   },
-  { threshold: 0.3 }
+  {
+    threshold: 0.4
+  }
 );
 
-animatedItems.forEach(item => observer.observe(item));
+aboutRows.forEach(row => observer.observe(row));
+
 
 
 
@@ -42,7 +52,6 @@ showFabric(fabricIndex);
 
 
 // ================= CHOOSE FABRIC LOGIC =================
-// THIS IS WHAT YOU ADD ⬇️⬇️⬇️
 
 document.querySelectorAll(".choose-btn").forEach(button => {
   button.addEventListener("click", () => {
@@ -50,6 +59,10 @@ document.querySelectorAll(".choose-btn").forEach(button => {
     window.location.href = page;
   });
 });
+
+
+
+
 
 
 
