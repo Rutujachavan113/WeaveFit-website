@@ -1,4 +1,4 @@
-# 👗 CustomFit Studio – Smart Online Clothing Platform
+# 👗 WeaveFit Studio – Smart Online Clothing Platform
 
 CustomFit Studio is a modern, responsive web application that allows users to book customized clothing services online. The platform provides a seamless experience for selecting garment types, choosing fabrics, entering measurements, and booking tailoring services.
 
